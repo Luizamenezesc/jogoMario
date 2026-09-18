@@ -1,7 +1,19 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const music = document.querySelector('#background-music');
+
+let musicStarted = false;
+
+const startMusic = () => {
+    if (!musicStarted) {
+        music.play().catch(() => {});
+        musicStarted = true;
+    }
+};
 
 const jump = () => {
+    startMusic();
+
     mario.classList.add('jump');
 
     setTimeout(() => {
@@ -12,7 +24,10 @@ const jump = () => {
 const loop = setInterval(() => {
 
     const pipePosition = pipe.offsetLeft;
-    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
+    const marioPosition = +window
+        .getComputedStyle(mario)
+        .bottom
+        .replace('px', '');
 
     if (
         pipePosition <= 120 &&
@@ -30,7 +45,11 @@ const loop = setInterval(() => {
         gameOver.src = 'assets/images/game-over.png';
         gameOver.classList.add('game-over');
 
-        document.querySelector('.game-board').appendChild(gameOver);
+        document
+            .querySelector('.game-board')
+            .appendChild(gameOver);
+
+        music.pause();
 
         clearInterval(loop);
     }
