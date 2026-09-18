@@ -32,4 +32,7 @@ npm run dev
 
 | Nome | Matrícula | Papel |
 |---|---|---|
-| SEU NOME | SUA MATRÍCULA | Scrum Master |
+| Maria Luíza Menezes Cordeiro | 01899275 | Desenvolvedor |
+| Matheus Henrique Braga Carvalho | 01901320 | Testador |
+| Igor Vitório Ribeiro Coutinho | 01907958 | Scrum Master |
+| Simone Cordeiro | 01880148 | Documentador |
