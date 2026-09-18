@@ -1,0 +1,9 @@
+{
+  "name": "jogo-mario-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jogo inspirado no universo do Mario para atividade acadêmica de Git e GitHub.",
+  "scripts": {
+    "dev": "npx --yes serve ."
+  }
+}
